@@ -24,11 +24,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Header />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
     </html>
+  );
+}
+
+function Header() {
+  return (
+    <header className="flex items-center justify-around p-4">
+      <div>
+        <h1 className="text-3xl font-bold">Filra</h1>
+      </div>
+      {/* its gonna be links to pages */}
+      <div className="flex items-center gap-4">
+        <h1 className="text-xl font-bold">Features</h1>
+        <h1 className="text-xl font-bold">About</h1>
+        <h1 className="text-xl font-bold">Login</h1>
+      </div>
+    </header>
   );
 }
